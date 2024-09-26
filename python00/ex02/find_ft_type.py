@@ -16,4 +16,3 @@ def all_thing_is_obj(object: any) -> int:
         case _:
             print(f"Type not found")
     return 42
-
