@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ft_package"
+version = "0.0.1"
+description = "A sample test package"
+authors = [ {name="Joseph Bettini"}, {name="jbettini", email="jbettini@student.42nice.fr"}]
+maintainers = [
+    { name = "Joseph Bettini", email = "jbettini@student.42nice.fr" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+[project.urls]
+Homepage = "https://github.com/jbettini/piscine-data-science/tree/main/python00/ex09"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ft_package"]
