@@ -28,7 +28,7 @@ Args:
         if i in "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~":
             marks += 1
 
-    print(f"The text contains {len(input_str)} characters:")
+    print(f"\nThe text contains {len(input_str)} characters:")
     print(f"{count(input_str, str.isupper)} upper letters")
     print(f"{count(input_str, str.islower)} lower letters")
     print(f"{marks} punctuation marks")
@@ -56,7 +56,6 @@ Usage:
         if len(sys.argv) == 1:
             print("What is the text to count ?")
             txt = sys.stdin.readline()
-            print("\n---\n\"", txt, "\"---\n")
         else:
             txt = sys.argv[1]
         print_num_char(txt)
