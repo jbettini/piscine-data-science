@@ -1,4 +1,7 @@
 def count_in_list(lst: list, occurence: str) -> int:
+    '''
+Counts how many times a specific element appears in a list.
+'''
     i = 0
     for elements in lst:
         if elements == occurence:
@@ -7,6 +10,9 @@ def count_in_list(lst: list, occurence: str) -> int:
 
 
 def main():
+    '''
+Test count_list function, output must be 2
+'''
     print(count_in_list(["toto", "tata", "toto"], "toto"))
 
 
