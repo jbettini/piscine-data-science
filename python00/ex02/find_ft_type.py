@@ -9,10 +9,7 @@ def all_thing_is_obj(object: any) -> int:
         case set(object):
             print(f"Set : {type(object)}")
         case str(object):
-            if object == "Brian":
-                print(f"Brian is in the kitchen : {type(object)}")
-            else:
-                print(f"Str : {type(object)}")
+                print(f"{object} is in the kitchen : {type(object)}")
         case _:
             print("Type not found")
     return 42

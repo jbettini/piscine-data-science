@@ -2,6 +2,7 @@ import sys
 from ft_filter import ft_filter
 import string
 
+
 def main():
     """
 Filters words from a space-separated string based on length and punctuation.
@@ -26,11 +27,14 @@ Example:
             "AssertionError: the arguments are bad"
         n = int(sys.argv[2])
         s = sys.argv[1].split(" ")
-        del_marks = lambda str : all(char not in string.punctuation \
-            and char in string.printable for char in str)
-        s1 = ft_filter(del_marks, s)
-        del_len = lambda str : len(str) >= n
-        print(ft_filter(del_len, s1))
+        s1 = ft_filter(
+            lambda str: all(
+                char not in string.punctuation and char in string.printable
+                for char in str
+            ),
+            s
+        )
+        print(ft_filter(lambda str: len(str) > n, s1))
     except AssertionError as msg:
         print(msg)
     except ValueError:

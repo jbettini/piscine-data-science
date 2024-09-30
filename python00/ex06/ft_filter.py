@@ -1,4 +1,4 @@
-from typing import  Callable, Generator, Iterable, T, Optional
+from typing import Callable, Generator, Iterable, T, Optional
 
 
 def ft_filter(func: Optional[Callable[[T], bool]], it: Iterable[T]) \
