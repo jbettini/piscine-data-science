@@ -3,7 +3,11 @@ from load_csv import load
 import matplotlib.pyplot as plt
 
 
-def display_country(country: str, df: DataFrame):
+def plot_life_expectancy(country: str, df: DataFrame):
+    """
+Plot life expectancy projections for a specified
+country using data from the given DataFrame.
+"""
     data = df[df['country'] == 'France']
     if data.empty:
         print(f"No data found for {country}")
@@ -20,9 +24,12 @@ def display_country(country: str, df: DataFrame):
 
 
 def main():
+    '''
+Tester for plot_life_expectancy function.
+'''
     try:
         df = load("../Ressources/life_expectancy_years.csv")
-        display_country("France", df)
+        plot_life_expectancy("France", df)
     except BaseException as e:
         print(f"An exception has been catch: {type(e).__name__}.")
 
