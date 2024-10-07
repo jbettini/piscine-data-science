@@ -6,7 +6,8 @@ class Character(ABC):
     @abstractmethod
     def __init__(self, name: str, is_alive: bool = True):
         """"Initialize a character with a name and alive status."""
-        pass
+        self.first_name = name
+        self.is_alive = is_alive
 
     def is_alive(self):
         """Return True if the character is alive, False otherwise."""
@@ -21,8 +22,7 @@ class Stark(Character):
     """Represents a member of House Stark in the Game of Thrones universe."""
     def __init__(self, name: str, is_alive: bool = True):
         """Initialize a Stark character with a name and alive status."""
-        self.name = name
-        self.is_alive = is_alive
+        super().__init__(name, is_alive)
 
 
 def main():

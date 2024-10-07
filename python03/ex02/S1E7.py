@@ -5,8 +5,7 @@ class Baratheon(Character):
     """Represents a member of Baratheon House in Game of Thrones."""
     def __init__(self, name: str, is_alive: bool = True):
         """Initialize a Baratheon character with a name and alive status."""
-        self.first_name = name
-        self.is_alive = is_alive
+        super().__init__(name, is_alive)
         self.family_name = "Baratheon"
         self.eyes = "brown"
         self.hairs = "dark"
@@ -24,8 +23,7 @@ class Lannister(Character):
     """Represents a member of Lannister House in Game of Thrones."""
     def __init__(self, name: str, is_alive: bool = True):
         """Initialize a Lannister character with a name and alive status."""
-        self.first_name = name
-        self.is_alive = is_alive
+        super().__init__(name, is_alive)
         self.family_name = "Lannister"
         self.eyes = "blue"
         self.hairs = "light"
